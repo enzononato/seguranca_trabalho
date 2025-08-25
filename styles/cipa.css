@@ -1,3 +1,7 @@
+h1{
+    justify-self: center;
+}
+
 .cardcipa {
   background: #fff;
   border: 1px solid var(--ink-100);
@@ -20,4 +24,8 @@
   margin: 0 0 6px;
   font-size: 14px;
   color: var(--ink-600)
+}
+
+.img_cipa{
+    max-width: 200px;
 }
