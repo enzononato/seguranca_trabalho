@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Segurança do Trabalho — Ações do Ano</title>
+    <meta name="description" content="Portal para divulgar ações de segurança do trabalho realizadas durante o ano." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <!-- NAV -->
+    <nav class="nav" aria-label="Navegação principal">
+        <div class="nav__inner">
+            <div class="brand" aria-label="Segurança do Trabalho">
+                <div class="brand__logo" aria-hidden="true">ST</div>
+                <div class="brand__name">Segurança do Trabalho</div>
+            </div>
+            <div class="nav__links">
+                <div class="dropdown">
+                    <div class="dropdown-toggle">
+                        Serviços <span>▼</span>
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="#">🏷️ Campanhas</a>
+                        <a href="#">🎓 Treinamentos</a>
+                        <a href="#">🛡️ Inspeções</a>
+                        <a href="#">📜 Normas</a>
+                        <a href="#">📜 Cipa</a>
+                        <a href="#">📜 Brigada</a>
+                        <a href="#">📜 Relatos</a>
+                        <a href="#">📜 Emergência</a>
+                        <a href="#">📜 PDV</a>
+                        <a href="#">📜 Benefícios</a>
+                    </div>
+                </div>
+                <a class="nav__links__buttons" href="#galeria">Galeria</a>
+                <a class="nav__links__buttons" href="#linha-do-tempo">Linha do tempo</a>
+                <a href="#contato" class="cta">Fale conosco</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero">
+        <div class="hero__inner">
+            <div>
+                <h1>Promoção de Ações em <span id="anoAtual"></span></h1>
+                <p>Transparência e cultura de prevenção: veja as ações de <strong>Segurança do Trabalho</strong>
+                    realizadas ao longo do ano — treinamentos, inspeções, campanhas e melhorias implementadas.</p>
+
+            </div>
+            <div class="hero__panel" role="region" aria-label="Resumo anual">
+                <div class="kpis">
+                    <div class="card" role="status">
+                        <p class="dias_sem_acidentes">Dias sem acidentes</p>
+                        <div class="knum" id="dias">0</div>
+                    </div>
+                    <div class="card" role="status">
+                        <h3>Ações no ano</h3>
+                        <div class="knum" id="kpi-total">0</div>
+                        <div class="trend up">+ Transparência</div>
+                    </div>
+                    <div class="card" role="status">
+                        <h3>Treinamentos</h3>
+                        <div class="knum" id="kpi-trein">0</div>
+                        <div class="trend up">+ Capacitação</div>
+                    </div>
+                    <div class="card" role="status">
+                        <h3>Inspeções</h3>
+                        <div class="knum" id="kpi-insp">0</div>
+                        <div class="trend warn">+ Conformidade</div>
+                    </div>
+                    <div class="card" role="status">
+                        <h3>Campanhas</h3>
+                        <div class="knum" id="kpi-camp">0</div>
+                        <div class="trend up">+ Engajamento</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION: FILTROS + GALERIA -->
+    <section class="section" id="galeria" aria-label="Galeria de ações">
+        <h2>Galeria de Ações</h2>
+        <p class="lead">Filtre por mês, categoria ou pesquise por palavras-chave. Clique nas imagens para ampliar e ver
+            os detalhes.</p>
+
+        <div class="filters">
+            <div class="search">
+                <input id="q" type="search" placeholder="Pesquisar por título ou descrição…" aria-label="Pesquisar" />
+                <select id="mes" aria-label="Filtrar por mês"></select>
+                <select id="categoria" aria-label="Filtrar por categoria"></select>
+            </div>
+            <button id="limpar" class="chip" aria-label="Limpar filtros">Limpar filtros</button>
+        </div>
+
+        <div id="grid" class="grid" role="list"></div>
+    </section>
+
+    <!-- SECTION: LINHA DO TEMPO -->
+    <section class="section" id="linha-do-tempo" aria-label="Linha do tempo das ações">
+        <h2>Linha do Tempo</h2>
+        <p class="lead">Acompanhe a sequência das principais entregas ao longo do ano.</p>
+        <div class="timeline" id="timeline" role="list"></div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="section" id="contato" aria-label="Fale conosco">
+        <h2>Contato</h2>
+        <p class="lead">Quer saber mais ou sugerir melhorias? Fale com nossa equipe de Segurança do Trabalho.</p>
+        <div class="card">
+            <p><strong>E-mail:</strong> seguranca@empresa.com.br<br>
+                <strong>WhatsApp:</strong> <a href="https://wa.me/5500000000000" target="_blank" rel="noopener">(00)
+                    00000-0000</a><br>
+                <strong>Endereço:</strong> Unidade Matriz — Setor de Segurança do Trabalho
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="foot">
+            <div>© <span id="y"></span> Segurança do Trabalho — Todos os direitos reservados.</div>
+            <div><a href="#">Política de Privacidade</a> • <a href="#">LGPD</a></div>
+        </div>
+    </footer>
+
+    <!-- MODAL -->
+    <div class="modal" id="modal" aria-hidden="true" aria-label="Visualização de imagem">
+        <div class="modal__inner" role="dialog" aria-modal="true">
+            <div class="modal__top">
+                <strong id="modalTitle">Título</strong>
+                <button id="modalClose" class="chip" aria-label="Fechar">Fechar</button>
+            </div>
+            <div class="modal__body">
+                <img id="modalImg" class="modal__img" alt="" />
+                <p id="modalDesc" style="margin-top:10px;color:var(--ink-600)"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
